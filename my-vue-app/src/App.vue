@@ -34,8 +34,8 @@
 
 <template>
   <div>
-    <AppCorpo />
     <AppIntestazioneVue />
+    <AppCorpo />
   </div>
 </template>
 
