@@ -13,19 +13,22 @@
     },
     data() {
       return {
-        carte : store
+        store
       }
     },
     mounted() {
-    axios.get(this.store.urlAPI).then(r => {
-      this.store.carte = r.data.results;
-      this.store.loading = false;
-    }).catch(errore => {
-      console.error("Cerca in un altro cuore la risposta, senza sosta", errore);
-      this.store.carte = [];
-      this.store.loading = false;
-    });
-  }
+      console.log(axios)
+      axios.get(this.store.urlAPI).then(r => {
+        console.log(r)
+        this.store.carte = r.data.data;
+        this.store.loading = false;
+        console.log(this.store)
+      }).catch(errore => {
+        console.error("Cerca in un altro cuore la risposta, senza sosta", errore);
+        this.store.carte = [];
+        this.store.loading = false;
+      });
+    }
   }
 </script>
 

@@ -18,6 +18,6 @@ import { store } from '../data/store';
 
 <template>
     <div>
-        <AppCardVue v-for="carta in store" :key="carta" :name="carta.name" :archetipo="carta.archetype" :img="carta.card_images.image_url_small" />
+        <AppCardVue v-for="carta in store.carte" :key="carta" :name="carta.name" :archetipo="carta.archetype" :img="carta.card_images[0].image_url_small" />
     </div>
 </template>
